@@ -1,0 +1,22 @@
+version: '3'
+services:
+  nuxt:
+    image: app:latest
+    container_name: nuxt_app
+    ports:
+        - "3000:3000"
+    restart: always
+
+  nginx:
+    depends_on:
+    - nuxt
+    image: nginx:latest
+    container_name: nginx_proxy
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/certs/app-test.com.br.crt:/etc/nginx/app-test.com.br.crt
+      - ./nginx/certs/app-test.com.br.key:/etc/nginx/app-test.com.br.key
+      - ./nginx/certs/dhparam.pem:/etc/nginx/dhparam.pem
+    ports:
+      - "80:80"
+      - "443:443"
