@@ -1,3 +1,6 @@
 *.crt
 *.key
 *.pem
+
+/static
+/app
