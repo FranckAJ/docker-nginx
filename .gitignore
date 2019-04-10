@@ -1,6 +1,9 @@
 *.crt
 *.key
 *.pem
+*.log
 
 /static
 /app
+/sonar
+/db
