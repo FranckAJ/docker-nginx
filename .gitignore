@@ -5,5 +5,7 @@
 
 /static
 /app
-/sonar
+/sonar/db
+/sonar/sonar
+/sonar/jenkins_home
 /db
