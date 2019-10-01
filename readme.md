@@ -1,4 +1,6 @@
 Scrips NGINX and SonarQube
+* static site NGINX config;
+* proxy config 
 
 ### Generate Certs:
 ```sh
